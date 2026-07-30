@@ -13,10 +13,14 @@ jobs:
   build:
     strategy:
       matrix:
-        stack: [18, 20, 22]
+        stack: [22]
 
     name: heroku-${{ matrix.stack }}
     runs-on: ubuntu-latest
+
+    # needed so upload-release-action can create the release and attach assets
+    permissions:
+      contents: write
 
     env:
       vips_image: libvips/heroku-${{ matrix.stack }}:${{ github.event.inputs.version }}

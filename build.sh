@@ -2,7 +2,7 @@
 
 set -e
 
-STACK_VERSIONS=(18 20 22)
+STACK_VERSIONS=(22)
 
 for stack_version in "${STACK_VERSIONS[@]}"; do
   mkdir -p build

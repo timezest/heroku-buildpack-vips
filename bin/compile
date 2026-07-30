@@ -10,7 +10,7 @@ ENV_DIR=$3
 LP_DIR=`cd $(dirname $0); cd ..; pwd`
 
 # Github repo url
-repo="https://github.com/hardpixel/heroku-buildpack-vips"
+repo="https://github.com/timezest/heroku-buildpack-vips"
 
 # Default version
 version="8.14.4"
