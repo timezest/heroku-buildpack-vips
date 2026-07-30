@@ -125,8 +125,9 @@ RUN wget ${DE265_URL}/v${DE265_VERSION}/libde265-${DE265_VERSION}.tar.gz \
   && make install
 
 # build libx265
+# bitbucket now 403s anonymous downloads, so use the videolan mirror
 ARG X265_VERSION=3.5
-ARG X265_URL=https://bitbucket.org/multicoreware/x265_git/downloads
+ARG X265_URL=https://download.videolan.org/pub/videolan/x265
 
 RUN wget ${X265_URL}/x265_${X265_VERSION}.tar.gz \
   && tar xf x265_${X265_VERSION}.tar.gz \
