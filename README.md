@@ -2,18 +2,16 @@
 
 Heroku buildpack with [libvips](https://github.com/libvips/libvips) installed. A buildpack for the modern Heroku stacks.
 
-[![Vips](https://img.shields.io/github/v/tag/hardpixel/heroku-buildpack-vips?label=vips&logo=hack-the-box)](https://github.com/hardpixel/heroku-buildpack-vips/releases)
-[![Heroku 18](https://img.shields.io/badge/stack-18-904edf?logo=heroku)](https://github.com/hardpixel/heroku-buildpack-vips/releases)
-[![Heroku 20](https://img.shields.io/badge/stack-20-904edf?logo=heroku)](https://github.com/hardpixel/heroku-buildpack-vips/releases)
-[![Heroku 22](https://img.shields.io/badge/stack-22-904edf?logo=heroku)](https://github.com/hardpixel/heroku-buildpack-vips/releases)
-[![Build](https://github.com/hardpixel/heroku-buildpack-vips/actions/workflows/build.yml/badge.svg)](https://github.com/hardpixel/heroku-buildpack-vips/actions/workflows/build.yml)
+[![Vips](https://img.shields.io/github/v/tag/timezest/heroku-buildpack-vips?label=vips&logo=hack-the-box)](https://github.com/timezest/heroku-buildpack-vips/releases)
+[![Heroku 22](https://img.shields.io/badge/stack-22-904edf?logo=heroku)](https://github.com/timezest/heroku-buildpack-vips/releases)
+[![Build](https://github.com/timezest/heroku-buildpack-vips/actions/workflows/build.yml/badge.svg)](https://github.com/timezest/heroku-buildpack-vips/actions/workflows/build.yml)
 
 ## Usage
 
 Run the commands below to add this buildpack to your app:
 
 ```
-$ heroku buildpacks:add --index 1 https://github.com/hardpixel/heroku-buildpack-vips
+$ heroku buildpacks:add --index 1 https://github.com/timezest/heroku-buildpack-vips
 ```
 
 Deploy to Heroku and verify the result by running this command:
@@ -25,7 +23,7 @@ vips 8.14.4
 
 ## Configuration
 
-You can select the preferred version by setting the `VIPS_VERSION` environment variable. It defaults to the latest stable [release](https://github.com/libvips/libvips/releases). Check the available versions in the [releases](https://github.com/hardpixel/heroku-buildpack-vips/releases) page.
+You can select the preferred version by setting the `VIPS_VERSION` environment variable. Check the available versions in the [releases](https://github.com/timezest/heroku-buildpack-vips/releases) page — the buildpack can only install a version we have built and released here.
 
 ```
 $ heroku config:set VIPS_VERSION=8.13.0
