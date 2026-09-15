@@ -28,6 +28,13 @@ function message() {
   echo "       vips: $*"
 }
 
+# The heroku-24 stack already ships libvips 8.15.1, which is new enough for Active Storage.
+if [[ $STACK == heroku-24 ]]; then
+  topic "Skipping install"
+  message "$STACK provides libvips, using the stack library"
+  exit 0
+fi
+
 vendor="${BUILD_DIR}/vendor/vips"
 bundle="${CACHE_DIR}/vips/$version"
 
